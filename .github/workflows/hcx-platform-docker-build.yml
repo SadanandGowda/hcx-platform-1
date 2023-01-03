@@ -68,3 +68,8 @@ jobs:
           push: true
           tags: swasth2021/hcx-scheduler-jobs:${{ env.IMAGE_TAG }}_${{ github.run_number }}
           labels: hcx-scheduler-jobs image
+      - run: |
+          mkdir -p ~/image/
+          echo ${{ env.IMAGE_TAG }}_${{ github.run_number }} > ~/image/tag.txt
+          
+          
